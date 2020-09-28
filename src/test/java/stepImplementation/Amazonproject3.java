@@ -33,12 +33,12 @@ public class Amazonproject3 {
 	    
 	    public void select() {
 	    	
-	    	driver.findElement(By.xpath("//input[@id="twotabsearchtextbox"]")).sendKeys("iPhone");
+	    	driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).sendKeys("iPhone");
 
-	    	driver.findElement(By.xpath("//a[text()="iPhone 11 Pro"]")).click();
+	    	driver.findElement(By.xpath("//a[text()='iPhone 11 Pro']")).click();
 
 
-	    	boolean compare=driver.findelement(By.xpath("//h1[text()="Compare Apple iPhone products"]")).isDisplayed();
+	    	boolean compare=driver.findElement(By.xpath("//h1[text()='Compare Apple iPhone products']")).isDisplayed();
 
 	    	if(compare){
 
@@ -75,13 +75,13 @@ public class Amazonproject3 {
 	                    // Switching to Child window
 	                    driver.switchTo().window(ChildWindow);	                                                                                                           
 	                    			   
-	                    String rating=driver.findelement(By.xpath("(//i[contains(@class,"a-icon a-icon-star a-star")])[1]//span")).getText();
+	                    String rating=driver.findElement(By.xpath("(//i[contains(@class,'a-icon a-icon-star a-star')])[1]//span")).getText();
 
 	                    System.out.println(rating);
 
-	                    driver.findelement(By.xpath("//input[@title="Add to Shopping Cart"]")).click();
+	                    driver.findElement(By.xpath("//input[@title='Add to Shopping Cart']")).click();
 	                     
-	                    String price=driver.findelement(By.xpath("((//span[@class="a-size-base-plus"])[1])//span[contains(@class,"price")]")).getText();
+	                    String price=driver.findElement(By.xpath("((//span[@class='a-size-base-plus'])[1])//span[contains(@class,'price')]")).getText();
 
 	                    System.out.println(price);
 		   
